@@ -13,6 +13,7 @@
 		EE5BB8C329DEBC0A007021FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE5BB8C229DEBC0A007021FD /* Preview Assets.xcassets */; };
 		EE5BB8CA29DEC1BA007021FD /* DailyFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5BB8C929DEC1BA007021FD /* DailyFight.swift */; };
 		EE5BB8CC29DEC341007021FD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5BB8CB29DEC340007021FD /* Theme.swift */; };
+		EE7CDF9329DFB14300C24F1F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CDF9229DFB14300C24F1F /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		EE5BB8C229DEBC0A007021FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EE5BB8C929DEC1BA007021FD /* DailyFight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFight.swift; sourceTree = "<group>"; };
 		EE5BB8CB29DEC340007021FD /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		EE7CDF9229DFB14300C24F1F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				EE5BB8BB29DEBC09007021FD /* AGuRatKuNaApp.swift */,
 				EE5BB8BD29DEBC09007021FD /* ContentView.swift */,
 				EE5BB8C929DEC1BA007021FD /* DailyFight.swift */,
+				EE7CDF9229DFB14300C24F1F /* CardView.swift */,
 				EE5BB8CB29DEC340007021FD /* Theme.swift */,
 				EE5BB8BF29DEBC0A007021FD /* Assets.xcassets */,
 				EE5BB8C129DEBC0A007021FD /* Preview Content */,
@@ -147,6 +150,7 @@
 				EE5BB8CC29DEC341007021FD /* Theme.swift in Sources */,
 				EE5BB8CA29DEC1BA007021FD /* DailyFight.swift in Sources */,
 				EE5BB8BC29DEBC09007021FD /* AGuRatKuNaApp.swift in Sources */,
+				EE7CDF9329DFB14300C24F1F /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
