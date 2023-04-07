@@ -18,6 +18,7 @@ struct CardView: View {
             HStack {
                 Label("\(fight.fighters.count)", systemImage: "person.3")
                 Spacer()
+                // Label 스타일을 숫자가 아이콘보다 먼저 나오게 하고 싶다. 커스텀하러 가자.
                 Label("\(fight.fightTimes)", systemImage: "clock")
                     .padding(.trailing, 20)
             }
