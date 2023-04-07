@@ -20,7 +20,8 @@ struct CardView: View {
                 Spacer()
                 // Label 스타일을 숫자가 아이콘보다 먼저 나오게 하고 싶다. 커스텀하러 가자.
                 Label("\(fight.fightTimes)", systemImage: "clock")
-                    .padding(.trailing, 20)
+                    // TrailingIconLabelStyle에서 LabelStyle 프로토콜을 따를 때 필수적으로 구현해줘야되는 거 2번
+                    .labelStyle(.trailingIcon)
             }
             .font(.caption)
         }
