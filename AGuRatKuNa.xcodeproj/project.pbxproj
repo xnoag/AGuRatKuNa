@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE26610D29E41D8A008731A2 /* FightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE26610C29E41D8A008731A2 /* FightsView.swift */; };
 		EE5BB8BC29DEBC09007021FD /* AGuRatKuNaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5BB8BB29DEBC09007021FD /* AGuRatKuNaApp.swift */; };
 		EE5BB8BE29DEBC09007021FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5BB8BD29DEBC09007021FD /* ContentView.swift */; };
 		EE5BB8C029DEBC0A007021FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE5BB8BF29DEBC0A007021FD /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE26610C29E41D8A008731A2 /* FightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightsView.swift; sourceTree = "<group>"; };
 		EE5BB8B829DEBC09007021FD /* AGuRatKuNa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AGuRatKuNa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE5BB8BB29DEBC09007021FD /* AGuRatKuNaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGuRatKuNaApp.swift; sourceTree = "<group>"; };
 		EE5BB8BD29DEBC09007021FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				EE5BB8BD29DEBC09007021FD /* ContentView.swift */,
 				EE5BB8C929DEC1BA007021FD /* DailyFight.swift */,
 				EE7CDF9229DFB14300C24F1F /* CardView.swift */,
+				EE26610C29E41D8A008731A2 /* FightsView.swift */,
 				EE7CDF9429DFB76C00C24F1F /* TrailingIconLabelStyle.swift */,
 				EE5BB8CB29DEC340007021FD /* Theme.swift */,
 				EE5BB8BF29DEBC0A007021FD /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 			files = (
 				EE5BB8BE29DEBC09007021FD /* ContentView.swift in Sources */,
 				EE5BB8CC29DEC341007021FD /* Theme.swift in Sources */,
+				EE26610D29E41D8A008731A2 /* FightsView.swift in Sources */,
 				EE5BB8CA29DEC1BA007021FD /* DailyFight.swift in Sources */,
 				EE5BB8BC29DEBC09007021FD /* AGuRatKuNaApp.swift in Sources */,
 				EE7CDF9529DFB76C00C24F1F /* TrailingIconLabelStyle.swift in Sources */,
