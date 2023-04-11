@@ -32,4 +32,9 @@ enum Theme: String {
             return .black
         }
     }
+    
+    // Color 이름 정의
+    var colorName: String {
+        String(rawValue)
+    }
 }
