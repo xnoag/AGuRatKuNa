@@ -12,7 +12,12 @@ struct FightsView: View {
     // 그리고 이 fights라는 변수는 FightsView 구조체의 매게변수(parameter)로써 작용을 한다.
     var fights: [DailyFight]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(fights) { dogFights in
+                CardView(fight: dogFights)
+                    .listRowBackground(dogFights.theme.mainColor)
+            }
+        }
     }
 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DailyFight {
+struct DailyFight: Identifiable {
     // 이 데이터들을 가지고 정보를 뷰마다 주고받고 할 거임.
     
     // sampleData를 ForEach를 활용해서 뿌려줄건데, 이 ForEach가 배열의 각각의 요소에 접근하고 이를 식별할 수 있어야 하기 때문에 id라는 요소를 넣어주고, 유니크 id를 생성할 수 있는 UUID 타입을 따르도록 한다. id를 가장 먼저 쓰는 습관을 들이자 <- id가 각 요소를 식별하는데 가장 핵심적인 역할을 하기 때문에.
