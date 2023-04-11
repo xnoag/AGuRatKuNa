@@ -12,7 +12,9 @@ struct FightsView: View {
     // 그리고 이 fights라는 변수는 FightsView 구조체의 매게변수(parameter)로써 작용을 한다.
     var fights: [DailyFight]
     var body: some View {
+        // List 형태로 배열의 데이터들을 뿌려줄 거다.
         List {
+            // ForEach에서 fights 배열에 접근했고, fights배열의 각각의 인덱스, 요소들은 DailyFight 타입을 따른다. 이 각각의 인덱스, 요소들을 dogFights라고 불러서 접근하기로 했고, CardView의 fight를 dogFights로 설정해서 DailyFight에 접근할 수 있게 한다.
             ForEach(fights) { dogFights in
                 CardView(fight: dogFights)
                     .listRowBackground(dogFights.theme.mainColor)

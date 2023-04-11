@@ -11,7 +11,7 @@ import SwiftUI
 struct AGuRatKuNaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FightsView(fights: DailyFight.sampleData)
         }
     }
 }
