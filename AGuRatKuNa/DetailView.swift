@@ -37,7 +37,9 @@ struct DetailView: View {
             // Fighters Info Section
             Section(header: Text("Fighters")) {
                 // Fighters를 ForEach로 접근해서 데이터를 뿌려줄 건데, DailyFight의 fighters 배열에 접근해서 각각의 요소들을 ForEach로 뿌려줄 건데, 이 때 fighters 배열 자체가 ForEach가 인식할 수 있도록 Identifiable 해야한다. 그러니까, fighters 배열에 id를 생성하러 가자.
-                
+                ForEach(fight.fighters) {fighter in
+                    Label(fighter.fighterName, systemImage: "person")
+                }
             }
             
             // History Section
