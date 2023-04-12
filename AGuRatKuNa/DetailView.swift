@@ -44,7 +44,7 @@ struct DetailView: View {
             
             // History Section
             Section(header: Text("History")) {
-                
+                Label("No Fighters Yet", systemImage: "calendar.badge.exclamationmark")
             }
             
         }
