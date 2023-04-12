@@ -14,7 +14,8 @@ struct DailyFight: Identifiable {
     var id: UUID
     var title: String
     var fightTimes: Int
-    var fighters: [String]
+    // [Fighters]로 타입을 바꿔준다.
+    var fighters: [Fighters]
     // Theme 프로퍼티도 저장을 할 건데, Theme 타입이 정의가 안 되어 있기 때문에 정의해준다.
     // Theme 정의하고옴.
     var theme: Theme
@@ -24,8 +25,22 @@ struct DailyFight: Identifiable {
         self.id = id
         self.title = title
         self.fightTimes = fightTimes
-        self.fighters = fighters
+        // fighters 배열을 { } 안의 형태로 매핑을 할 거다. { } 안의 내용은, fighters의 각 요소를 Fighters의 fighterName에 부여하는 형태로.
+        self.fighters = fighters.map { Fighters(fighterName: $0) }
         self.theme = theme
+    }
+}
+
+// fighters 배열을 id가 포함된 구조체로 정의해주자.
+extension DailyFight {
+    struct Fighters: Identifiable {
+        var id: UUID
+        var fighterName: String
+        
+        init(id: UUID = UUID(), fighterName: String) {
+            self.id = id
+            self.fighterName = fighterName
+        }
     }
 }
 
