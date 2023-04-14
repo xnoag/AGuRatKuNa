@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EE18EA4029E54DDB00F4E560 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18EA3F29E54DDB00F4E560 /* DetailView.swift */; };
+		EE1D3D6229E9340E00F34820 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D3D6129E9340E00F34820 /* DetailEditView.swift */; };
 		EE26610D29E41D8A008731A2 /* FightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE26610C29E41D8A008731A2 /* FightsView.swift */; };
 		EE5BB8BC29DEBC09007021FD /* AGuRatKuNaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5BB8BB29DEBC09007021FD /* AGuRatKuNaApp.swift */; };
 		EE5BB8BE29DEBC09007021FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5BB8BD29DEBC09007021FD /* ContentView.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		EE18EA3F29E54DDB00F4E560 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		EE1D3D6129E9340E00F34820 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
 		EE26610C29E41D8A008731A2 /* FightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightsView.swift; sourceTree = "<group>"; };
 		EE5BB8B829DEBC09007021FD /* AGuRatKuNa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AGuRatKuNa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE5BB8BB29DEBC09007021FD /* AGuRatKuNaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGuRatKuNaApp.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				EE5BB8BB29DEBC09007021FD /* AGuRatKuNaApp.swift */,
 				EE18EA3F29E54DDB00F4E560 /* DetailView.swift */,
+				EE1D3D6129E9340E00F34820 /* DetailEditView.swift */,
 				EE5BB8BD29DEBC09007021FD /* ContentView.swift */,
 				EE5BB8C929DEC1BA007021FD /* DailyFight.swift */,
 				EE7CDF9229DFB14300C24F1F /* CardView.swift */,
@@ -157,6 +160,7 @@
 			files = (
 				EE5BB8BE29DEBC09007021FD /* ContentView.swift in Sources */,
 				EE18EA4029E54DDB00F4E560 /* DetailView.swift in Sources */,
+				EE1D3D6229E9340E00F34820 /* DetailEditView.swift in Sources */,
 				EE5BB8CC29DEC341007021FD /* Theme.swift in Sources */,
 				EE26610D29E41D8A008731A2 /* FightsView.swift in Sources */,
 				EE5BB8CA29DEC1BA007021FD /* DailyFight.swift in Sources */,
