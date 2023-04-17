@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct DetailEditView: View {
+    
+    @State var text = ""
+    @State var fightTimes = 10.0
+    
     var body: some View {
-        List {
+        Form {
             // FIGHTING INFO Section
             Section(header: Text("FIGHTING INFO")) {
-                
+                TextField("Title", text: $text)
+                HStack {
+                    Slider(
+                        value: $fightTimes,
+                        in: 0...60,
+                        step: 5
+                    )
+                    Text("\(Int(fightTimes)) Minutes")
+                }//HStack
             }
             // FIGHTERS Section
             Section {
