@@ -11,6 +11,7 @@ struct DetailEditView: View {
     
     @State var text = ""
     @State var fightTimes = 10.0
+    @State var theme: Theme = .gaonRed
     
     var body: some View {
         Form {
@@ -25,6 +26,12 @@ struct DetailEditView: View {
                     )
                     Text("\(Int(fightTimes)) Minutes")
                 }//HStack
+                    Picker("Theme", selection: $theme) {
+                        Label("Red", systemImage: "paintpalette").tag(Theme.gaonRed)
+                        Label("Yellow", systemImage: "paintpalette").tag(Theme.gaonYellow)
+                        Label("Blue", systemImage: "paintpalette").tag(Theme.gaonBlue)
+                        Label("Green", systemImage: "paintpalette").tag(Theme.gaonGreen)
+                }
             }
             // FIGHTERS Section
             Section {
