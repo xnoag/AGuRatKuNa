@@ -9,8 +9,8 @@ import SwiftUI
 
 struct DetailEditView: View {
     
-    @State var text = ""
-    @State var fightTimes = 10.0
+    @State var text: String = ""
+    @State var fightTimes: Double = 10.0
     @State var theme: Theme = .gaonRed
     
     var body: some View {
@@ -27,10 +27,13 @@ struct DetailEditView: View {
                     Text("\(Int(fightTimes)) Minutes")
                 }//HStack
                     Picker("Theme", selection: $theme) {
-                        Label("Red", systemImage: "paintpalette").tag(Theme.gaonRed)
-                        Label("Yellow", systemImage: "paintpalette").tag(Theme.gaonYellow)
-                        Label("Blue", systemImage: "paintpalette").tag(Theme.gaonBlue)
-                        Label("Green", systemImage: "paintpalette").tag(Theme.gaonGreen)
+                        ForEach(Theme.allCases) { themee in
+                            Label("\(themee.colorName)", systemImage: "paintpalette").tag(themee)
+                        }
+//                        Label("Red", systemImage: "paintpalette").tag(Theme.gaonRed)
+//                        Label("Yellow", systemImage: "paintpalette").tag(Theme.gaonYellow)
+//                        Label("Blue", systemImage: "paintpalette").tag(Theme.gaonBlue)
+//                        Label("Green", systemImage: "paintpalette").tag(Theme.gaonGreen)
                 }
             }
             // FIGHTERS Section

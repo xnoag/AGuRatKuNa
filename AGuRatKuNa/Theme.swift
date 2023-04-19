@@ -9,7 +9,7 @@ import Foundation
 // Color는 SwiftUI Framework에서 제공하는 기능이므로 import 해준다.
 import SwiftUI
 
-enum Theme: String {
+enum Theme: String, Identifiable, CaseIterable {
     // 이런 색상들을 쓸거다.
     case gaonRed
     case gaonYellow
@@ -36,5 +36,9 @@ enum Theme: String {
     // Color 이름 정의
     var colorName: String {
         String(rawValue)
+    }
+    
+    var id: String {
+        colorName
     }
 }
