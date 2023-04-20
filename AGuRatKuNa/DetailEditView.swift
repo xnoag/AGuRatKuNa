@@ -12,6 +12,8 @@ struct DetailEditView: View {
     @State var text: String = ""
     @State var fightTimes: Double = 10.0
     @State var theme: Theme = .gaonRed
+    @State private var newFighter = ""
+    @State var fighters: [DailyFight.Fighters] = []
     
     var body: some View {
         Form {
@@ -37,8 +39,23 @@ struct DetailEditView: View {
                 }
             }
             // FIGHTERS Section
-            Section {
-                
+            Section(header: Text("FIGHTERS")) {
+                ForEach(fighters) { fighters in
+                    Text(fighters.fighterName)
+                }
+                .onDelete { indices in
+                    fighters.remove(atOffsets: indices)
+                }
+                HStack {
+                    TextField("New Fighter", text: $newFighter)
+                    Button(action: {
+                        fighters.append(DailyFight.Fighters(fighterName: newFighter))
+                        newFighter = ""
+                    }) {
+                        Image(systemName: "plus.circle.fill")
+                    }//Button
+                    .disabled(newFighter.isEmpty)
+                }//HStack
             }
         }
     }
