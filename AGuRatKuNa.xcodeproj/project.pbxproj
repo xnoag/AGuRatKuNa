@@ -11,11 +11,14 @@
 		EE1D3D6229E9340E00F34820 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D3D6129E9340E00F34820 /* DetailEditView.swift */; };
 		EE26610D29E41D8A008731A2 /* FightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE26610C29E41D8A008731A2 /* FightsView.swift */; };
 		EE5BB8BC29DEBC09007021FD /* AGuRatKuNaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5BB8BB29DEBC09007021FD /* AGuRatKuNaApp.swift */; };
-		EE5BB8BE29DEBC09007021FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5BB8BD29DEBC09007021FD /* ContentView.swift */; };
 		EE5BB8C029DEBC0A007021FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE5BB8BF29DEBC0A007021FD /* Assets.xcassets */; };
 		EE5BB8C329DEBC0A007021FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE5BB8C229DEBC0A007021FD /* Preview Assets.xcassets */; };
 		EE5BB8CA29DEC1BA007021FD /* DailyFight.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5BB8C929DEC1BA007021FD /* DailyFight.swift */; };
 		EE5BB8CC29DEC341007021FD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5BB8CB29DEC340007021FD /* Theme.swift */; };
+		EE77668529F3EC6B00FFEB68 /* FightingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77668429F3EC6B00FFEB68 /* FightingView.swift */; };
+		EE77668729F3EC7200FFEB68 /* FightingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77668629F3EC7200FFEB68 /* FightingHeaderView.swift */; };
+		EE77668929F3EC8200FFEB68 /* FightingContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77668829F3EC8200FFEB68 /* FightingContentsView.swift */; };
+		EE77668B29F3EC8A00FFEB68 /* FightingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77668A29F3EC8A00FFEB68 /* FightingFooterView.swift */; };
 		EE7CDF9329DFB14300C24F1F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CDF9229DFB14300C24F1F /* CardView.swift */; };
 		EE7CDF9529DFB76C00C24F1F /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CDF9429DFB76C00C24F1F /* TrailingIconLabelStyle.swift */; };
 /* End PBXBuildFile section */
@@ -26,11 +29,14 @@
 		EE26610C29E41D8A008731A2 /* FightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightsView.swift; sourceTree = "<group>"; };
 		EE5BB8B829DEBC09007021FD /* AGuRatKuNa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AGuRatKuNa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE5BB8BB29DEBC09007021FD /* AGuRatKuNaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGuRatKuNaApp.swift; sourceTree = "<group>"; };
-		EE5BB8BD29DEBC09007021FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EE5BB8BF29DEBC0A007021FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE5BB8C229DEBC0A007021FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EE5BB8C929DEC1BA007021FD /* DailyFight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFight.swift; sourceTree = "<group>"; };
 		EE5BB8CB29DEC340007021FD /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		EE77668429F3EC6B00FFEB68 /* FightingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightingView.swift; sourceTree = "<group>"; };
+		EE77668629F3EC7200FFEB68 /* FightingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightingHeaderView.swift; sourceTree = "<group>"; };
+		EE77668829F3EC8200FFEB68 /* FightingContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightingContentsView.swift; sourceTree = "<group>"; };
+		EE77668A29F3EC8A00FFEB68 /* FightingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightingFooterView.swift; sourceTree = "<group>"; };
 		EE7CDF9229DFB14300C24F1F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EE7CDF9429DFB76C00C24F1F /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,14 +72,11 @@
 			isa = PBXGroup;
 			children = (
 				EE5BB8BB29DEBC09007021FD /* AGuRatKuNaApp.swift */,
-				EE18EA3F29E54DDB00F4E560 /* DetailView.swift */,
-				EE1D3D6129E9340E00F34820 /* DetailEditView.swift */,
-				EE5BB8BD29DEBC09007021FD /* ContentView.swift */,
-				EE5BB8C929DEC1BA007021FD /* DailyFight.swift */,
-				EE7CDF9229DFB14300C24F1F /* CardView.swift */,
-				EE26610C29E41D8A008731A2 /* FightsView.swift */,
-				EE7CDF9429DFB76C00C24F1F /* TrailingIconLabelStyle.swift */,
-				EE5BB8CB29DEC340007021FD /* Theme.swift */,
+				EE77668C29F3ECEE00FFEB68 /* Data */,
+				EE77668D29F3ED0D00FFEB68 /* FightsView */,
+				EE77668F29F3ED7200FFEB68 /* DetailView */,
+				EE77669029F3ED7900FFEB68 /* DetailEditView */,
+				EE77668E29F3ED1D00FFEB68 /* FightingView */,
 				EE5BB8BF29DEBC0A007021FD /* Assets.xcassets */,
 				EE5BB8C129DEBC0A007021FD /* Preview Content */,
 			);
@@ -86,6 +89,52 @@
 				EE5BB8C229DEBC0A007021FD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EE77668C29F3ECEE00FFEB68 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EE5BB8C929DEC1BA007021FD /* DailyFight.swift */,
+				EE5BB8CB29DEC340007021FD /* Theme.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EE77668D29F3ED0D00FFEB68 /* FightsView */ = {
+			isa = PBXGroup;
+			children = (
+				EE26610C29E41D8A008731A2 /* FightsView.swift */,
+				EE7CDF9229DFB14300C24F1F /* CardView.swift */,
+				EE7CDF9429DFB76C00C24F1F /* TrailingIconLabelStyle.swift */,
+			);
+			path = FightsView;
+			sourceTree = "<group>";
+		};
+		EE77668E29F3ED1D00FFEB68 /* FightingView */ = {
+			isa = PBXGroup;
+			children = (
+				EE77668429F3EC6B00FFEB68 /* FightingView.swift */,
+				EE77668629F3EC7200FFEB68 /* FightingHeaderView.swift */,
+				EE77668829F3EC8200FFEB68 /* FightingContentsView.swift */,
+				EE77668A29F3EC8A00FFEB68 /* FightingFooterView.swift */,
+			);
+			path = FightingView;
+			sourceTree = "<group>";
+		};
+		EE77668F29F3ED7200FFEB68 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				EE18EA3F29E54DDB00F4E560 /* DetailView.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		EE77669029F3ED7900FFEB68 /* DetailEditView */ = {
+			isa = PBXGroup;
+			children = (
+				EE1D3D6129E9340E00F34820 /* DetailEditView.swift */,
+			);
+			path = DetailEditView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,15 +207,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE5BB8BE29DEBC09007021FD /* ContentView.swift in Sources */,
 				EE18EA4029E54DDB00F4E560 /* DetailView.swift in Sources */,
+				EE77668529F3EC6B00FFEB68 /* FightingView.swift in Sources */,
 				EE1D3D6229E9340E00F34820 /* DetailEditView.swift in Sources */,
 				EE5BB8CC29DEC341007021FD /* Theme.swift in Sources */,
 				EE26610D29E41D8A008731A2 /* FightsView.swift in Sources */,
+				EE77668929F3EC8200FFEB68 /* FightingContentsView.swift in Sources */,
+				EE77668729F3EC7200FFEB68 /* FightingHeaderView.swift in Sources */,
 				EE5BB8CA29DEC1BA007021FD /* DailyFight.swift in Sources */,
 				EE5BB8BC29DEBC09007021FD /* AGuRatKuNaApp.swift in Sources */,
 				EE7CDF9529DFB76C00C24F1F /* TrailingIconLabelStyle.swift in Sources */,
 				EE7CDF9329DFB14300C24F1F /* CardView.swift in Sources */,
+				EE77668B29F3EC8A00FFEB68 /* FightingFooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
