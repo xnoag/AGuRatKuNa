@@ -96,6 +96,7 @@
 			children = (
 				EE5BB8C929DEC1BA007021FD /* DailyFight.swift */,
 				EE5BB8CB29DEC340007021FD /* Theme.swift */,
+				EE7CDF9429DFB76C00C24F1F /* TrailingIconLabelStyle.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -105,7 +106,6 @@
 			children = (
 				EE26610C29E41D8A008731A2 /* FightsView.swift */,
 				EE7CDF9229DFB14300C24F1F /* CardView.swift */,
-				EE7CDF9429DFB76C00C24F1F /* TrailingIconLabelStyle.swift */,
 			);
 			path = FightsView;
 			sourceTree = "<group>";
