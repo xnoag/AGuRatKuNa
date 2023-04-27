@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct FightingFooterView: View {
+    var fight: DailyFight
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("Speaker 1 of \(fight.fighters.count)")
+            Spacer()
+            Button(action: {}) {
+                Image(systemName: "forward.fill")
+            }
+        }
+        .padding([.bottom, .horizontal])
     }
 }
 
 struct FightingFooterView_Previews: PreviewProvider {
     static var previews: some View {
-        FightingFooterView()
+        FightingFooterView(fight: DailyFight.sampleData[0])
     }
 }
