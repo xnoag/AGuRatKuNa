@@ -21,6 +21,7 @@
 		EE77668B29F3EC8A00FFEB68 /* FightingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE77668A29F3EC8A00FFEB68 /* FightingFooterView.swift */; };
 		EE7CDF9329DFB14300C24F1F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CDF9229DFB14300C24F1F /* CardView.swift */; };
 		EE7CDF9529DFB76C00C24F1F /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7CDF9429DFB76C00C24F1F /* TrailingIconLabelStyle.swift */; };
+		EEB67AB929FAB5BE00A24CA5 /* ColoredProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB67AB829FAB5BE00A24CA5 /* ColoredProgressViewStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		EE77668A29F3EC8A00FFEB68 /* FightingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightingFooterView.swift; sourceTree = "<group>"; };
 		EE7CDF9229DFB14300C24F1F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EE7CDF9429DFB76C00C24F1F /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
+		EEB67AB829FAB5BE00A24CA5 /* ColoredProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredProgressViewStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				EE77668429F3EC6B00FFEB68 /* FightingView.swift */,
 				EE77668629F3EC7200FFEB68 /* FightingHeaderView.swift */,
+				EEB67AB829FAB5BE00A24CA5 /* ColoredProgressViewStyle.swift */,
 				EE77668829F3EC8200FFEB68 /* FightingContentsView.swift */,
 				EE77668A29F3EC8A00FFEB68 /* FightingFooterView.swift */,
 			);
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB67AB929FAB5BE00A24CA5 /* ColoredProgressViewStyle.swift in Sources */,
 				EE18EA4029E54DDB00F4E560 /* DetailView.swift in Sources */,
 				EE77668529F3EC6B00FFEB68 /* FightingView.swift in Sources */,
 				EE1D3D6229E9340E00F34820 /* DetailEditView.swift in Sources */,

@@ -21,10 +21,13 @@ struct FightingHeaderView: View {
         return Double(secondsElapsed) / Double(secondsRemaining)
     }
     
+    var theme: Theme
+    
     
     var body: some View {
         VStack {
             ProgressView(value: progress)
+                .progressViewStyle(ColoredProgressViewStyle(theme: theme))
             HStack {
                 VStack(alignment: .leading) {
                     Text("Seconds Elapsed")
@@ -46,6 +49,6 @@ struct FightingHeaderView: View {
 
 struct FightingHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        FightingHeaderView(secondsElapsed: 400, secondsRemaining: 600)
+        FightingHeaderView(secondsElapsed: 400, secondsRemaining: 600, theme: .gaonBlue)
     }
 }
