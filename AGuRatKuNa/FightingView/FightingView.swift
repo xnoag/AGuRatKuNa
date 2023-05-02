@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct FightingView: View {
+    var fight: DailyFight
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            RoundedRectangle(cornerRadius: 16)
+                .fill(fight.theme.mainColor)
+            VStack {
+                FightingHeaderView(secondsElapsed: 400, secondsRemaining: 600, theme: fight.theme)
+                FightingContentsView(fight: fight)
+                FightingFooterView(fight: fight)
+            }
+        }
+        .padding()
     }
 }
 
 struct FightingView_Previews: PreviewProvider {
     static var previews: some View {
-        FightingView()
+        FightingView(fight: DailyFight.sampleData[2])
     }
 }

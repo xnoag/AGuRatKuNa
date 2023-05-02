@@ -49,7 +49,7 @@ extension DailyFight {
 extension DailyFight {
     static let sampleData: [DailyFight] =
     [
-        DailyFight(title: "누가 닭다리를 두 개 먹었는가?", fightTimes: 10, fighters: ["박가온", "김릴리", "김억두"], theme: .gaonRed),
+        DailyFight(title: "누가 닭다리를 두 개 먹었는가?", fightTimes: 10, fighters: ["GaOn", "김릴리", "김억두"], theme: .gaonRed),
         DailyFight(title: "누가 내 엉덩이를 만졌는가?", fightTimes: 5, fighters: ["최가온", "왕릴리", "강억두", "신짱구"], theme: .gaonYellow),
         DailyFight(title: "누가 사고 냈냐?", fightTimes: 4, fighters: ["김가온", "박릴리", "김철수", "훈발놈"], theme: .gaonBlue)
     ]

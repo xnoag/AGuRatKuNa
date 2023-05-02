@@ -16,6 +16,7 @@ struct FightingFooterView: View {
             Button(action: {}) {
                 Image(systemName: "forward.fill")
             }
+            .foregroundColor(fight.theme.accentColor)
         }
         .padding([.bottom, .horizontal])
     }

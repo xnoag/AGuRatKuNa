@@ -26,7 +26,7 @@ struct ColoredProgressViewStyle: ProgressViewStyle {
 struct ColoredProgressViewStyle_Previews: PreviewProvider {
     static var previews: some View {
         ProgressView(value: 0.4)
-            .progressViewStyle(ColoredProgressViewStyle(theme: .gaonBlue))
+            .progressViewStyle(ColoredProgressViewStyle(theme: .gaonRed))
             .previewLayout(.sizeThatFits)
     }
 }

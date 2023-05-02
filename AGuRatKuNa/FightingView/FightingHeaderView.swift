@@ -49,6 +49,6 @@ struct FightingHeaderView: View {
 
 struct FightingHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        FightingHeaderView(secondsElapsed: 400, secondsRemaining: 600, theme: .gaonBlue)
+        FightingHeaderView(secondsElapsed: 400, secondsRemaining: 600, theme: .gaonRed)
     }
 }
