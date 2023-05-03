@@ -11,6 +11,7 @@ struct FightsView: View {
     // FightsView에서 DailyFight.Swift 파일에 있는 데이터를 통해 [DailyFight] 형태의 배열을 가져오게 하기 위해서 프로퍼티를 정의해준다.
     // 그리고 이 fights라는 변수는 FightsView 구조체의 매게변수(parameter)로써 작용을 한다.
     var fights: [DailyFight]
+    @State private var isShowingSheet = false
     var body: some View {
         NavigationView {
             // List 형태로 배열의 데이터들을 뿌려줄 거다.
@@ -24,6 +25,16 @@ struct FightsView: View {
                 }
             }
             .navigationTitle("AGuRatKuNa")
+            .toolbar {
+                Button(action: {
+                    isShowingSheet.toggle()
+                }) {
+                    Image(systemName: "plus")
+                }
+                .sheet(isPresented: $isShowingSheet) {
+                    DetailEditView()
+                }
+            }
         }
     }
 }
