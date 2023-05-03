@@ -15,9 +15,11 @@ struct DetailView: View {
         List {
             // Fighting Info Section
             Section(header: Text("Fighting Info")) {
-                Label("Start Fighting", systemImage: "timer")
-                    .font(.headline)
-                    .foregroundColor(.accentColor)
+                NavigationLink(destination: FightingView(fight: fight)) {
+                    Label("Start Fighting", systemImage: "timer")
+                        .font(.headline)
+                        .foregroundColor(.accentColor)
+                }
                 HStack {
                     Label("Length", systemImage: "clock")
                     Spacer()
@@ -48,6 +50,7 @@ struct DetailView: View {
             }
             
         }
+        .navigationTitle(fight.title)
     }
 }
 

@@ -20,6 +20,7 @@ struct FightingView: View {
             }
         }
         .padding()
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
