@@ -32,7 +32,22 @@ struct FightsView: View {
                     Image(systemName: "plus")
                 }
                 .sheet(isPresented: $isShowingSheet) {
+                    NavigationView {
                     DetailEditView()
+                            .toolbar {
+                                ToolbarItem(placement: .cancellationAction) {
+                                    Button("Dismiss") {
+                                        isShowingSheet.toggle()
+                                    }
+                                }
+                            }
+                            .toolbar {
+                                ToolbarItem(placement: .confirmationAction) {
+                                    Button("Add") {
+                                    }
+                                }
+                            }
+                        }
                 }
             }
         }
