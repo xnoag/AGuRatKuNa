@@ -8,27 +8,27 @@
 import SwiftUI
 
 struct DetailEditView: View {
-    
-    @State var text: String = ""
-    @State var fightTimes: Double = 10.0
-    @State var theme: Theme = .gaonRed
+    @Binding var fight: DailyFight
+//    @State var text: String = ""
+//    @State var fightTimes: Double = 10.0
+//    @State var theme: Theme = .gaonRed
     @State private var newFighter = ""
-    @State var fighters: [DailyFight.Fighters] = []
+//    @State var fighters: [DailyFight.Fighters] = []
     
     var body: some View {
         Form {
             // FIGHTING INFO Section
             Section(header: Text("FIGHTING INFO")) {
-                TextField("Title", text: $text)
+                TextField("Title", text: $fight.title)
                 HStack {
                     Slider(
-                        value: $fightTimes,
+                        value: $fight.fightTimesByDouble,
                         in: 0...60,
                         step: 5
                     )
-                    Text("\(Int(fightTimes)) Minutes")
+                    Text("\(Int(fight.fightTimes)) Minutes")
                 }//HStack
-                    Picker("Theme", selection: $theme) {
+                Picker("Theme", selection: $fight.theme) {
                         ForEach(Theme.allCases) { themee in
                             Label("\(themee.colorName)", systemImage: "paintpalette").tag(themee)
                         }
@@ -40,16 +40,16 @@ struct DetailEditView: View {
             }
             // FIGHTERS Section
             Section(header: Text("FIGHTERS")) {
-                ForEach(fighters) { fighters in
+                ForEach(fight.fighters) { fighters in
                     Text(fighters.fighterName)
                 }
                 .onDelete { indices in
-                    fighters.remove(atOffsets: indices)
+                    fight.fighters.remove(atOffsets: indices)
                 }
                 HStack {
                     TextField("New Fighter", text: $newFighter)
                     Button(action: {
-                        fighters.append(DailyFight.Fighters(fighterName: newFighter))
+                        fight.fighters.append(DailyFight.Fighters(fighterName: newFighter))
                         newFighter = ""
                     }) {
                         Image(systemName: "plus.circle.fill")
@@ -63,6 +63,6 @@ struct DetailEditView: View {
 
 struct DetailEditView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailEditView()
+        DetailEditView(fight: .constant(DailyFight.sampleData[0]))
     }
 }

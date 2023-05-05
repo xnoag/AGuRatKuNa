@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     // DailyFight 타입을 따르는 저장 프로퍼티(변수)를 정의한다. 그래야만 DailyFight에서 저장한 그 저장 프로퍼티에 접근할 수 있다.
-    var fight: DailyFight
+    @Binding var fight: DailyFight
     @State private var isShowingSheet = false
     
     var body: some View {
@@ -59,7 +59,7 @@ struct DetailView: View {
         }
         .sheet(isPresented: $isShowingSheet) {
             NavigationView {
-                DetailEditView()g
+                DetailEditView(fight: $fight)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Cancel") {
@@ -79,6 +79,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(fight: DailyFight.sampleData[0])
+        DetailView(fight: .constant(DailyFight.sampleData[0]))
     }
 }

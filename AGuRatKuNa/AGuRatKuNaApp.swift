@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct AGuRatKuNaApp: App {
+    @State var fights = DailyFight.sampleData
     var body: some Scene {
         WindowGroup {
-            FightsView(fights: DailyFight.sampleData)
+            FightsView(fights: $fights)
         }
     }
 }

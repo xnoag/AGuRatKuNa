@@ -14,6 +14,14 @@ struct DailyFight: Identifiable {
     var id: UUID
     var title: String
     var fightTimes: Int
+    var fightTimesByDouble: Double {
+        get {
+            Double(fightTimes)
+        }
+        set {
+            fightTimes = Int(newValue)
+        }
+    }
     // [Fighters]로 타입을 바꿔준다.
     var fighters: [Fighters]
     // Theme 프로퍼티도 저장을 할 건데, Theme 타입이 정의가 안 되어 있기 때문에 정의해준다.
@@ -53,4 +61,10 @@ extension DailyFight {
         DailyFight(title: "엉덩이 문제", fightTimes: 5, fighters: ["최가온", "왕릴리", "강억두", "신짱구"], theme: .gaonYellow),
         DailyFight(title: "접촉사고 문제", fightTimes: 4, fighters: ["김가온", "박릴리", "김철수", "훈발놈"], theme: .gaonBlue)
     ]
+}
+
+extension DailyFight {
+    static var emptyFight: DailyFight {
+        DailyFight(title: "", fightTimes: 5, fighters: [], theme: .gaonRed)
+    }
 }
