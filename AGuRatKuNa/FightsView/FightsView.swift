@@ -44,6 +44,7 @@ struct FightsView: View {
                             .toolbar {
                                 ToolbarItem(placement: .confirmationAction) {
                                     Button("Add") {
+                                        isShowingSheet.toggle()
                                     }
                                 }
                             }
