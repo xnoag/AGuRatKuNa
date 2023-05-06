@@ -26,7 +26,9 @@ struct FightingView: View {
                     fightTimer.startScrum()
                 }
                 .onDisappear {
-                    fightTimer.stopScrum()
+                    fightTimer.stopFight()
+                    let newHistory = History(id: UUID(), date: Date(), fighters: fight.fighters)
+                    fight.history.insert(newHistory, at: 0)
                 }
         .navigationBarTitleDisplayMode(.inline)
     }

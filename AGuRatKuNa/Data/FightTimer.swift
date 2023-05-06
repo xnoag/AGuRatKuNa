@@ -65,7 +65,7 @@ class FightTimer: ObservableObject {
     }
     
     /// Stop the timer.
-    func stopScrum() {
+    func stopFight() {
         timer?.invalidate()
         timer = nil
         timerStopped = true

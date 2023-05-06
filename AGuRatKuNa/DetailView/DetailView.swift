@@ -48,9 +48,18 @@ struct DetailView: View {
             
             // History Section
             Section(header: Text("History")) {
-                Label("No Fighters Yet", systemImage: "calendar.badge.exclamationmark")
+                if fight.history.isEmpty {
+                    Label("No meetings yet", systemImage: "calendar.badge.exclamationmark")
+                } else {
+                    ForEach(fight.history) { history in
+                        HStack {
+                            Image(systemName: "calendar")
+                            Text(history.date, style: .date)
+                        }
+                    }
+                }
+                
             }
-            
         }
         .navigationTitle(fight.title)
         .toolbar {

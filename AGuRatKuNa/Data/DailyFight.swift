@@ -27,6 +27,7 @@ struct DailyFight: Identifiable {
     // Theme 프로퍼티도 저장을 할 건데, Theme 타입이 정의가 안 되어 있기 때문에 정의해준다.
     // Theme 정의하고옴.
     var theme: Theme
+    var history: [History] = []
     
     // title이나, fightTimes, fighters, theme 같은 경우에는, 밑에 sampleData를 작성할 때, 각각의 값을 써줄 수 있는 놈들인데, 이 UUID 타입을 따르는 id 프로퍼티는 내가 직접 값을 넣을 수 있는 게 아니라, 이 UUID가 직접 지정을 해주는 것이기 때문에, UUID() 초기화(이니셜라이징)을 해줘야한다.
     init(id: UUID = UUID(), title: String, fightTimes: Int, fighters: [String], theme: Theme) {
