@@ -8,15 +8,34 @@
 import SwiftUI
 
 struct FightingFooterView: View {
-    var fight: DailyFight
+    let realFighters: [FightTimer.Fighter]
+    var skipAction: ()->Void
+    
+    private var fighterNumber: Int? {
+        guard let index = realFighters.firstIndex(where: { !$0.isCompleted }) else { return nil }
+        return index + 1
+    }
+    private var isLastFighter: Bool {
+        return realFighters.dropLast().allSatisfy { $0.isCompleted }
+    }
+    private var fighterText: String {
+        guard let fighterNumber = fighterNumber else { return "No more realFighters" }
+        return "Speaker \(fighterNumber) of \(realFighters.count)"
+    }
+    
     var body: some View {
-        HStack {
-            Text("Speaker 1 of \(fight.fighters.count)")
-            Spacer()
-            Button(action: {}) {
-                Image(systemName: "forward.fill")
+        VStack {
+            HStack {
+                if isLastFighter {
+                    Text("Last Speaker")
+                } else {
+                    Text(fighterText)
+                    Spacer()
+                    Button(action: skipAction) {
+                        Image(systemName: "forward.fill")
+                    }
+                }
             }
-            .foregroundColor(fight.theme.accentColor)
         }
         .padding([.bottom, .horizontal])
     }
@@ -24,6 +43,6 @@ struct FightingFooterView: View {
 
 struct FightingFooterView_Previews: PreviewProvider {
     static var previews: some View {
-        FightingFooterView(fight: DailyFight.sampleData[0])
+        FightingFooterView(realFighters: DailyFight.sampleData[0].fighters.realFighters, skipAction: {})
     }
 }

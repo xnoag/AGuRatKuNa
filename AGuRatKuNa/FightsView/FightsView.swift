@@ -12,7 +12,7 @@ struct FightsView: View {
     // 그리고 이 fights라는 변수는 FightsView 구조체의 매게변수(parameter)로써 작용을 한다.
     @Binding var fights: [DailyFight]
     @State private var isShowingSheet = false
-    @State var fight = DailyFight.emptyFight
+    @State var emptyFight = DailyFight.emptyFight
     var body: some View {
         NavigationView {
             // List 형태로 배열의 데이터들을 뿌려줄 거다.
@@ -34,11 +34,12 @@ struct FightsView: View {
                 }
                 .sheet(isPresented: $isShowingSheet) {
                     NavigationView {
-                        DetailEditView(fight: $fight)
+                        DetailEditView(fight: $emptyFight)
                             .toolbar {
                                 ToolbarItem(placement: .cancellationAction) {
                                     Button("Dismiss") {
                                         isShowingSheet.toggle()
+                                        fights.append(emptyFight)
                                     }
                                 }
                             }

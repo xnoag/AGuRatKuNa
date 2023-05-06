@@ -8,24 +8,32 @@
 import SwiftUI
 
 struct FightingView: View {
-    var fight: DailyFight
+    @Binding var fight: DailyFight
+    @StateObject var fightTimer = FightTimer()
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16)
                 .fill(fight.theme.mainColor)
             VStack {
-                FightingHeaderView(secondsElapsed: 400, secondsRemaining: 600, theme: fight.theme)
+                FightingHeaderView(secondsElapsed: fightTimer.secondsElapsed, secondsRemaining: fightTimer.secondsRemaining, theme: fight.theme)
                 FightingContentsView(fight: fight)
-                FightingFooterView(fight: fight)
+                FightingFooterView(realFighters: fightTimer.realFighters, skipAction: fightTimer.skipFighter)
             }
         }
         .padding()
+        .onAppear {
+                    fightTimer.reset(fightTimes: fight.fightTimes, fighters: fight.fighters)
+                    fightTimer.startScrum()
+                }
+                .onDisappear {
+                    fightTimer.stopScrum()
+                }
         .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct FightingView_Previews: PreviewProvider {
     static var previews: some View {
-        FightingView(fight: DailyFight.sampleData[2])
+        FightingView(fight: .constant(DailyFight.sampleData[2]))
     }
 }

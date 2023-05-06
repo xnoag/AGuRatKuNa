@@ -17,7 +17,7 @@ struct DetailView: View {
         List {
             // Fighting Info Section
             Section(header: Text("Fighting Info")) {
-                NavigationLink(destination: FightingView(fight: fight)) {
+                NavigationLink(destination: FightingView(fight: $fight)) {
                     Label("Start Fighting", systemImage: "timer")
                         .font(.headline)
                         .foregroundColor(.accentColor)
