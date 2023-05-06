@@ -11,6 +11,7 @@ struct DetailView: View {
     // DailyFight 타입을 따르는 저장 프로퍼티(변수)를 정의한다. 그래야만 DailyFight에서 저장한 그 저장 프로퍼티에 접근할 수 있다.
     @Binding var fight: DailyFight
     @State private var isShowingSheet = false
+    @State private var editingFight = DailyFight.emptyFight
     
     var body: some View {
         List {
@@ -55,11 +56,12 @@ struct DetailView: View {
         .toolbar {
             Button("Edit") {
                 isShowingSheet.toggle()
+                editingFight = fight
             }
         }
         .sheet(isPresented: $isShowingSheet) {
             NavigationView {
-                DetailEditView(fight: $fight)
+                DetailEditView(fight: $editingFight)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Cancel") {
@@ -69,6 +71,7 @@ struct DetailView: View {
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Done") {
                                 isShowingSheet.toggle()
+                                fight = editingFight
                             }
                         }
                     }
