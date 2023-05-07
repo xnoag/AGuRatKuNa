@@ -12,7 +12,10 @@ struct FightsView: View {
     // 그리고 이 fights라는 변수는 FightsView 구조체의 매게변수(parameter)로써 작용을 한다.
     @Binding var fights: [DailyFight]
     @State private var isShowingSheet = false
+    @Environment(\.scenePhase) private var scenePhase
     @State var emptyFight = DailyFight.emptyFight
+    let saveAction: ()->Void
+    
     var body: some View {
         NavigationView {
             // List 형태로 배열의 데이터들을 뿌려줄 거다.
@@ -39,19 +42,24 @@ struct FightsView: View {
                                 ToolbarItem(placement: .cancellationAction) {
                                     Button("Dismiss") {
                                         isShowingSheet.toggle()
-                                        fights.append(emptyFight)
+                                        
                                     }
                                 }
                             }
                             .toolbar {
                                 ToolbarItem(placement: .confirmationAction) {
                                     Button("Add") {
+                                        fights.append(emptyFight)
+                                        emptyFight = DailyFight.emptyFight
                                         isShowingSheet.toggle()
                                     }
                                 }
                             }
                         }
                 }
+                .onChange(of: scenePhase) { phase in
+                    if phase == .inactive { saveAction() }
+                      }
             }
         }
     }
@@ -61,6 +69,6 @@ struct FightsView_Previews: PreviewProvider {
     static var previews: some View {
         // fights라는 매게변수를 위에서 부여를 했기때문에, 그 매게변수가 어떤 데이터를 가져오는지 표기를 해줘야한다.
         // sampleData라는 게 DailyFight.Swift에서 static으로 정의를 해줬기 때문에, 이건 타입 프로퍼티고 이 타입 프로퍼티는 인스턴스로 접근하는 게 아니라, 타입 자체로 접근을 해야하니까, DailyFight.sampleData로 데이터를 불러와야한다.
-        FightsView(fights: .constant(DailyFight.sampleData))
+        FightsView(fights: .constant(DailyFight.sampleData), saveAction: {})
         }
 }

@@ -9,10 +9,25 @@ import SwiftUI
 
 @main
 struct AGuRatKuNaApp: App {
-    @State var fights = DailyFight.sampleData
+    @StateObject private var store = FightStore()
     var body: some Scene {
         WindowGroup {
-            FightsView(fights: $fights)
+            FightsView(fights: $store.fights) {
+                Task {
+                    do {
+                                          try await store.save(savingFights: store.fights)
+                                      } catch {
+                                          fatalError(error.localizedDescription)
+                                      }
+                }
+            }
+                .task {
+                    do {
+                        try await store.load()
+                    } catch {
+                        fatalError(error.localizedDescription)
+                    }
+                }
         }
     }
 }
